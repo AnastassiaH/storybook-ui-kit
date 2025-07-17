@@ -1,69 +1,96 @@
-# React + TypeScript + Vite
+# 🧪 UI Component System — Storybook + React + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a UI component system built with React, Vite, Tailwind CSS, and Storybook.  
+It includes reusable components for building consistent user interfaces.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Setup Instructions
 
-## Expanding the ESLint configuration
+### 1. Clone the repository
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/AnastassiaH/storybook-ui-kit.git
+cd storybook-ui-kit
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Start Storybook
+
+```bash
+npm run storybook
+```
+
+Storybook will be available at:
+
+```
+http://localhost:6006
+```
+---
+
+## 🧰 Tech Stack
+
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Storybook
+- ESLint + Prettier
+
+---
+
+## 📥 Input Component
+
+### Features
+
+- Supports input types: `text`, `number`, `password`
+- Shows an eye icon to toggle password visibility
+- Displays a clear (X) button when `clearable` is true
+- Fully typed with TypeScript
+- Styled with Tailwind CSS
+
+### Storybook Stories
+
+- Text input
+- Password input with visibility toggle
+- Number input
+- Clearable input examples
+
+---
+
+## 🖼️ Screenshots from Storybook
+
+### Password Input
+
+- Password hidden  
+  ![Password Hidden](src/assets/input/input-password-hidden.png)
+
+- Password visible  
+  ![Password Visible](src/assets/input/input-password-visible.png)
+
+- Password clearable  
+  ![Password Clearable](src/assets/input/input-password-clearable.png)
+
+### Number Input
+
+- Number input  
+  ![Number Input](src/assets/input/input-number.png)
+
+- Number clearable  
+  ![Number Clearable](src/assets/input/input-number-clearable.png)
+
+### Text Input
+
+- Text input  
+  ![Text Input](src/assets/input/input-text.png)
+
+- Text clearable  
+  ![Text Clearable](src/assets/input/input-text-clearable.png)
+
+## 🖥️ Storybook UI
+
+![Storybook UI](src/assets/storybook-ui.png)
